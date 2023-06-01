@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="img/demod_space_mini.png" type="image/x-icon">
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title id="custom-title">pyter.pl</title>
+</head>
+<body>
+
+    <div class="body-mobile">   
+    </div>
+
+    <div class="body-pc">
+    </div>
+    
+      <video class="background-video" autoplay loop>
+        <source src="" type="video/mp4">
+      </video>
+
+        <script>
+          var videos = [
+            "video/Old Spice Captain - ZACZNIJ ŚWIEŻO, PACHNIJ ŚWIEŻO. 24⧸7.mp4",
+            "video/Old Spice reklama polska, siedzę na koniu.mp4",
+            "video/Śmierdzi śmierdzi strasznie smierdzi 1_Trim.mp4"
+          ];
+
+          // Losowe wybranie jednego z filmów
+          var randomIndex = Math.floor(Math.random() * videos.length);
+          var randomVideo = videos[randomIndex];
+
+          // Pobranie elementu <video> z klasą "myVideo"
+          var videoElements = document.getElementsByClassName("background-video");
+          var videoElement = videoElements[0];
+
+          videoElement.src = randomVideo;
+
+          var video = document.querySelector('.background-video');
+
+          video.volume = 0.5;
+        </script>
+    
+        <script>
+            function detectDevTools() {
+                const devtools = /./;
+                devtools.toString = function() {
+                    console.log('DevTools są włączone!');
+                    alert('DevTools są włączone!')
+                };
+            }
+
+            // Wywołanie funkcji detectDevTools
+            detectDevTools();
+        </script>
+  </body>
+</html>
